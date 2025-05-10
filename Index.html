@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lojinha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>𝐿𝑦𝑠𝑠 𝐴𝑐𝑒𝑠𝑠𝑜𝑟𝑖𝑜𝑠 </h1>
+    <nav>
+      <a href="#">Início</a>
+      <span class="icone-carrinho" onclick="abrirCarrinho()">🛒</span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à nossa loja!</h1>
+  </section>
+
+  <section class="catalogo">
+    <div class="produto" data-nome="Pulseira Borboletas & Corações" data-preco="59.82">
+      <img src="imagens/borboletas.jpg" alt="Produto 1">
+      <h3>Pulseira Borboletas & Corações</h3>
+      <p>R$ 59,82</p>
+      <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+    <div class="produto" data-nome="Pulseira Estrela & Coração" data-preco="59.82">
+      <img src="imagens/coração.jpg" alt="Produto 2">
+      <h3>Pulseira Estrela & Corações</h3>
+      <p>R$ 59,82</p>
+      <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+    <div class="produto" data-nome="Pulseira Gotas Cravejadas" data-preco="59.82">
+      <img src="imagens/gotas.jpg" alt="Produto 3">
+      <h3>Pulseira Gotas Cravejadas</h3>
+      <p>R$ 59,82</p>
+      <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+    <div class="produto" data-nome="Colar menino e menina" data-preco="59.82">
+      <img src="imagens/mm.jpg" alt="Produto 4">
+      <h3>Colar Menino e Menina</h3>
+      <p>R$ 59,82</p>
+      <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+    </div>
+  </section>
+
+  <section class="quem-somos-container">
+    <button class="toggle-quem-somos" onclick="toggleQuemSomos()">Quem Somos</button>
+    <div id="quem-somos" class="quem-somos escondido">
+      <h3>Sobre Nós</h3>
+      <p>Somos a Lyss Acessórios, apaixonadas por beleza, brilho e estilo. Cada peça é escolhida com carinho para deixar seu look ainda mais especial!</p>
+    </div>
+  </section>
+
+  <section class="carrinho" id="carrinho">
+    <span class="fechar-carrinho" onclick="fecharCarrinho()">×</span>
+    <ul id="lista-carrinho"></ul>
+    <p><strong>Total:</strong> <span id="total">R$ 0,00</span></p>
+    <button class="finalizar-btn" onclick="finalizarPedido()">Finalizar Pedido</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lyss Acessorios</p>
+  </footer>
+
+  <script src="carrinho.js"></script>
+</body>
+</html>
